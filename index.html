@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narrow Gate | Hybrid Vision</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        :root {
+            --navy: #0a192f;
+            --white: #ffffff;
+            --light-grey: #f8fafc;
+            --gold: #c5a059;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--white);
+            color: var(--navy);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+
+        /* --- EDITORIAL NAV --- */
+        nav {
+            padding: 60px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-mark {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        /* --- THE MANIFESTO HERO --- */
+        .hero-statement {
+            padding: 80px 8% 100px;
+            max-width: 1100px;
+        }
+
+        .hero-statement h1 {
+            font-size: 3.5rem;
+            line-height: 1.3;
+            font-weight: 400;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .scripture-citation {
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.5;
+        }
+
+        /* --- THE HYBRID PORTFOLIO GRID --- */
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0; /* Tight, monolithic look */
+            background: var(--navy);
+        }
+
+        .cat-box {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .cat-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .cat-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(10, 25, 47, 0.3);
+            transition: background 0.5s ease;
+        }
+
+        .cat-overlay h3 {
+            color: white;
+            font-size: 2.2rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+        }
+
+        .cat-box:hover img { transform: scale(1.05); opacity: 0.5; }
+        .cat-box:hover .cat-overlay { background: rgba(10, 25, 47, 0.7); }
+
+        /* --- THE DEFINITION FOOTER --- */
+        .definition-footer {
+            padding: 120px 8%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            background-color: var(--white);
+        }
+
+        .def-column {
+            padding-left: 30px;
+            border-left: 1px solid rgba(10, 25, 47, 0.1);
+        }
+
+        .def-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.5;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .def-word {
+            font-size: 2.2rem;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .def-meaning {
+            font-size: 1.3rem;
+            font-style: italic;
+            opacity: 0.7;
+            margin-top: 5px;
+        }
+
+        footer {
+            padding: 60px 8%;
+            background: var(--navy);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 900px) {
+            .work-grid, .definition-footer { grid-template-columns: 1fr; }
+            .hero-statement h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="brand-mark">Narrow Gate</div>
+        <div style="font-size: 0.7rem; opacity: 0.5; letter-spacing: 2px;">LEGACY & DESIGN</div>
+    </nav>
+
+    <main>
+        <section class="hero-statement">
+            <h1 class="serif">"Enter through the narrow gate... for narrow is the gate and difficult is the way which leads to life."</h1>
+            <span class="scripture-citation">Matthew 7:13-14</span>
+        </section>
+
+        <section class="work-grid">
+            <div class="cat-box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGDsQ80nRqIjJY7r_3O_7kIzx6_OxG0B5SyQ&s" alt="Neighborhoods">
+                <div class="cat-overlay"><h3>Neighborhoods</h3></div>
+            </div>
+            <div class="cat-box">
+                <img src="https://bt-wpstatic.freetls.fastly.net/wp-content/blogs.dir/3/files/2013/04/5.jpg" alt="Restoration">
+                <div class="cat-overlay"><h3>Restoration</h3></div>
+            </div>
+            <div class="cat-box">
+                <img src="https://images.squarespace-cdn.com/content/v1/59944cda03596ee46fd2af25/1520008910631-QZSKU0LHTNO7P5TWAS55/Morri+Sq-107.jpeg?format=2500w" alt="Infill">
+                <div class="cat-overlay"><h3>Urban Infill</h3></div>
+            </div>
+            <div class="cat-box">
+                <img src="https://www.cnu.org/sites/default/files/Earls-court-plan.png" alt="Reuse">
+                <div class="cat-overlay"><h3>Adaptive Reuse</h3></div>
+            </div>
+        </section>
+
+        <section class="definition-footer">
+            <div class="def-column">
+                <span class="def-label">Standard I.</span>
+                <h2 class="def-word serif">Narrow.</h2>
+                <p class="def-meaning">is the gate.</p>
+            </div>
+            <div class="def-column">
+                <span class="def-label">Standard II.</span>
+                <h2 class="def-word serif">Difficult.</h2>
+                <p class="def-meaning">is the way.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>Places, especially centers of life | Narrow Gate</div>
+        <div>Charleston, SC</div>
+    </footer>
+
+    <script>
+        ScrollReveal().reveal('.hero-statement, .cat-box, .def-column', { 
+            interval: 200, 
+            distance: '30px', 
+            origin: 'bottom',
+            duration: 1200 
+        });
+    </script>
+</body>
+</html>
